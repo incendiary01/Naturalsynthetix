@@ -32,7 +32,14 @@ Route::get('/', function()
 });
 Route::get('about', function()
 {
-    return View::make('pages.about');
+    
+    $people = [
+        "Nikolettosz Papálsz",
+        "Gáborosz Wigandosz",
+        "Kucoró Drazsé"
+    ];
+    
+    return View::make('pages.about', compact('people'));
 });
 Route::get('projects', function()
 {

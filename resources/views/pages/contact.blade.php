@@ -1,4 +1,5 @@
 @extends('layouts.default')
 @section('content')
-    i am the contact page
+<h1>Contact me!</h1>
+
 @stop
