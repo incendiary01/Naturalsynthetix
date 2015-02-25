@@ -1,2 +1,0 @@
-# Naturalsynthetix
-natsxh
