@@ -34,8 +34,8 @@ Route::get('about', function()
 {
     
     $people = [
-        "Nikolettosz Papálsz",
-        "Gáborosz Wigandosz",
+        "Nikolettosz Papőlosz",
+        "Gáborosz Wigando000sz",
         "Kucoró Drazsé"
     ];
     
