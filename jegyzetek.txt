@@ -1,0 +1,500 @@
+
+c:\wamp\www\Naturalsynthetix>php artisan make:migration add_excerpt_to_articles_t
+able --table="articles"
+Created Migration: 2015_02_28_083817_add_excerpt_to_articles_table
+
+c:\wamp\www\Naturalsynthetix>php artisan migrate
+Migrated: 2015_02_28_083817_add_excerpt_to_articles_table
+
+c:\wamp\www\Naturalsynthetix>php artisan migrate:rollback
+Rolled back: 2015_02_28_083817_add_excerpt_to_articles_table
+
+c:\wamp\www\Naturalsynthetix>php artisan migrate
+Migrated: 2015_02_28_083817_add_excerpt_to_articles_table
+
+c:\wamp\www\Naturalsynthetix>composer require doctrine/dbal
+Using version ~2.5 for doctrine/dbal
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+  - Installing doctrine/lexer (v1.0.1)
+    Loading from cache
+
+  - Installing doctrine/annotations (v1.2.3)
+    Loading from cache
+
+  - Installing doctrine/collections (v1.2)
+    Loading from cache
+
+  - Installing doctrine/cache (v1.4.0)
+    Loading from cache
+
+  - Installing doctrine/common (v2.4.2)
+    Loading from cache
+
+  - Installing doctrine/dbal (v2.5.1)
+    Downloading: connection...    Downloading: 0%
+    Downloading: 5%
+    Downloading: 10%
+    Downloading: 15%
+    Downloading: 20%
+    Downloading: 25%
+    Downloading: 30%
+    Downloading: 35%
+    Downloading: 40%
+    Downloading: 45%
+    Downloading: 50%
+    Downloading: 55%
+    Downloading: 60%
+    Downloading: 65%
+    Downloading: 80%
+    Downloading: 85%
+    Downloading: 90%
+    Downloading: 100%
+    Downloading: 100%
+
+Writing lock file
+Generating autoload files
+Generating optimized class loader
+
+c:\wamp\www\Naturalsynthetix>php artisan
+Laravel Framework version 5.0.6
+
+Usage:
+ [options] command [arguments]
+
+Options:
+ --help (-h)           Display this help message
+ --quiet (-q)          Do not output any message
+ --verbose (-v|vv|vvv) Increase the verbosity of messages: 1 for normal output, 2
+ for more verbose output and 3 for debug
+ --version (-V)        Display this application version
+ --ansi                Force ANSI output
+ --no-ansi             Disable ANSI output
+ --no-interaction (-n) Do not ask any interactive question
+ --env                 The environment the command should run under.
+
+Available commands:
+ clear-compiled        Remove the compiled class file
+ down                  Put the application into maintenance mode
+ env                   Display the current framework environment
+ help                  Displays help for a command
+ inspire               Display an inspiring quote
+ list                  Lists commands
+ migrate               Run the database migrations
+ optimize              Optimize the framework for better performance
+ serve                 Serve the application on the PHP development server
+ tinker                Interact with your application
+ up                    Bring the application out of maintenance mode
+app
+ app:name              Set the application namespace
+auth
+ auth:clear-resets     Flush expired password reset tokens
+cache
+ cache:clear           Flush the application cache
+ cache:table           Create a migration for the cache database table
+config
+ config:cache          Create a cache file for faster configuration loading
+ config:clear          Remove the configuration cache file
+db
+ db:seed               Seed the database with records
+event
+ event:generate        Generate the missing events and handlers based on registra
+tion
+handler
+ handler:command       Create a new command handler class
+ handler:event         Create a new event handler class
+ide-helper
+ ide-helper:generate   Generate a new IDE Helper file.
+ ide-helper:models     Generate autocompletion for models
+key
+ key:generate          Set the application key
+make
+ make:command          Create a new command class
+ make:console          Create a new Artisan command
+ make:controller       Create a new resource controller class
+ make:event            Create a new event class
+ make:middleware       Create a new middleware class
+ make:migration        Create a new migration file
+ make:model            Create a new Eloquent model class
+ make:provider         Create a new service provider class
+ make:request          Create a new form request class
+migrate
+ migrate:install       Create the migration repository
+ migrate:refresh       Reset and re-run all migrations
+ migrate:reset         Rollback all database migrations
+ migrate:rollback      Rollback the last database migration
+ migrate:status        Show a list of migrations up/down
+queue
+ queue:failed          List all of the failed queue jobs
+ queue:failed-table    Create a migration for the failed queue jobs database tabl
+e
+ queue:flush           Flush all of the failed queue jobs
+ queue:forget          Delete a failed queue job
+ queue:listen          Listen to a given queue
+ queue:restart         Restart queue worker daemons after their current job
+ queue:retry           Retry a failed queue job
+ queue:subscribe       Subscribe a URL to an Iron.io push queue
+ queue:table           Create a migration for the queue jobs database table
+ queue:work            Process the next job on a queue
+route
+ route:cache           Create a route cache file for faster route registration
+ route:clear           Remove the route cache file
+ route:list            List all registered routes
+schedule
+ schedule:run          Run the scheduled commands
+session
+ session:table         Create a migration for the session database table
+vendor
+ vendor:publish        Publish any publishable assets from vendor packages
+
+c:\wamp\www\Naturalsynthetix>php artisan make:model Article
+Model created successfully.
+Created Migration: 2015_02_28_090338_create_articles_table
+
+c:\wamp\www\Naturalsynthetix>php artisan tinker
+Psy Shell v0.3.5 (PHP 5.5.12 ÔÇö cli) by Justin Hileman
+>>> $article = new Article();
+PHP Fatal error:  Class 'Article' not found in eval()'d code on line 1
+>>> $article = new App/Article
+PHP error:  Use of undefined constant Article - assumed 'Article' on line 1
+>>> $article = new App/Article;
+PHP error:  Use of undefined constant Article - assumed 'Article' on line 1
+>>> >>> ^C
+c:\wamp\www\Naturalsynthetix>php artisan tinker
+Psy Shell v0.3.5 (PHP 5.5.12 ÔÇö cli) by Justin Hileman
+>>> $article = new App/Article;
+PHP error:  Use of undefined constant Article - assumed 'Article' on line 1
+>>> $article = new App/Article;
+PHP error:  Use of undefined constant Article - assumed 'Article' on line 1
+>>> $article = new App/Article;
+PHP error:  Use of undefined constant Article - assumed 'Article' on line 1
+>>> $article = new App/Article;
+PHP error:  Use of undefined constant Article - assumed 'Article' on line 1
+>>> $article = new App/Article;
+PHP error:  Use of undefined constant Article - assumed 'Article' on line 1
+>>> $article = new App/Article;
+PHP error:  Use of undefined constant Article - assumed 'Article' on line 1
+>>>
+>>> $article = new App/Article;
+PHP error:  Use of undefined constant Article - assumed 'Article' on line 1
+>>> $article = new App/Article;
+PHP error:  Use of undefined constant Article - assumed 'Article' on line 1
+>>>
+>>> $user = new App/User;
+PHP error:  Use of undefined constant User - assumed 'User' on line 1
+>>> $article = new App\Article;
+=> <App\Article #000000007b460db200000000a6d51465> {
+       incrementing: true,
+       timestamps: true,
+       exists: false,
+       snakeAttributes: true,
+       manyMethods: [
+           "belongsToMany",
+           "morphToMany",
+           "morphedByMany"
+       ]
+   }
+>>> $article
+=> <App\Article #000000007b460db200000000a6d51465> {
+       incrementing: true,
+       timestamps: true,
+       exists: false,
+       snakeAttributes: true,
+       manyMethods: [
+           "belongsToMany",
+           "morphToMany",
+           "morphedByMany"
+       ]
+   }
+>>> $article->title = "My new Article";
+=> "My new Article"
+>>> $article->body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, se
+d do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+ veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+sunt in culpa qui officia deserunt mollit anim id est laborum."
+=> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo
+r incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost
+rud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis au
+te irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat n
+ulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+officia deserunt mollit anim id est laborum."
+>>> $article->published_at = Carbon\Carbon::now();
+=> <Carbon\Carbon #000000007b460d5700000000a6d567c5> {
+       date: "2015-02-28 09:13:48",
+       timezone_type: 3,
+       timezone: "UTC"
+   }
+>>> $article->toArray();
+=> [
+       "title"        => "My new Article",
+       "body"         => "Lorem ipsum dolor sit amet, consectetur adipiscing elit
+, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m
+inim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm
+odo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cil
+lum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proide
+nt, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+       "published_at" => <Carbon\Carbon #000000007b460d5700000000a6d567c5> {
+           date: "2015-02-28 09:13:48",
+           timezone_type: 3,
+           timezone: "UTC"
+       }
+   ]
+>>> $article->save();
+=> true
+>>> $article = App\Article::find(1);
+=> <App\Article #000000007b460d4900000000a6d51465> {
+       incrementing: true,
+       timestamps: true,
+       exists: true,
+       snakeAttributes: true,
+       manyMethods: [
+           "belongsToMany",
+           "morphToMany",
+           "morphedByMany"
+       ]
+   }
+>>> $article->toArray();
+=> [
+       "id"           => 1,
+       "title"        => "My new Article",
+       "body"         => "Lorem ipsum dolor sit amet, consectetur adipiscing elit
+, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m
+inim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm
+odo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cil
+lum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proide
+nt, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+       "created_at"   => "2015-02-28 09:15:12",
+       "updated_at"   => "2015-02-28 09:15:12",
+       "published_at" => "2015-02-28 09:13:48",
+       "excerpt"      => ""
+   ]
+>>> $article->excerpt = "Lorem ipsum";
+=> "Lorem ipsum"
+>>> $article->update();
+=> true
+>>> $article = App\Article::create(['title'=>'New Article 2','body'=>'Lorem ipsum
+ dolor sit amet','published_at'=>Carbon\Carbon::now(),'excerpt'=>'excerpt']);
+Illuminate\Database\Eloquent\MassAssignmentException with message 'title'
+>>> $article
+=> <App\Article #000000007b460d4900000000a6d51465> {
+       incrementing: true,
+       timestamps: true,
+       exists: true,
+       snakeAttributes: true,
+       manyMethods: [
+           "belongsToMany",
+           "morphToMany",
+           "morphedByMany"
+       ]
+   }
+>>> $article-toArray();
+PHP Fatal error:  Call to undefined function toArray() in eval()'d code on line 1
+
+>>> $article->toArray();
+=> [
+       "id"           => 1,
+       "title"        => "My new Article",
+       "body"         => "Lorem ipsum dolor sit amet, consectetur adipiscing elit
+, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m
+inim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm
+odo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cil
+lum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proide
+nt, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+       "created_at"   => "2015-02-28 09:15:12",
+       "updated_at"   => "2015-02-28 09:21:49",
+       "published_at" => "2015-02-28 09:13:48",
+       "excerpt"      => "Lorem ipsum"
+   ]
+>>> >>> ^C
+c:\wamp\www\Naturalsynthetix>php artisan
+Laravel Framework version 5.0.6
+
+Usage:
+ [options] command [arguments]
+
+Options:
+ --help (-h)           Display this help message
+ --quiet (-q)          Do not output any message
+ --verbose (-v|vv|vvv) Increase the verbosity of messages: 1 for normal output, 2
+ for more verbose output and 3 for debug
+ --version (-V)        Display this application version
+ --ansi                Force ANSI output
+ --no-ansi             Disable ANSI output
+ --no-interaction (-n) Do not ask any interactive question
+ --env                 The environment the command should run under.
+
+Available commands:
+ clear-compiled        Remove the compiled class file
+ down                  Put the application into maintenance mode
+ env                   Display the current framework environment
+ help                  Displays help for a command
+ inspire               Display an inspiring quote
+ list                  Lists commands
+ migrate               Run the database migrations
+ optimize              Optimize the framework for better performance
+ serve                 Serve the application on the PHP development server
+ tinker                Interact with your application
+ up                    Bring the application out of maintenance mode
+app
+ app:name              Set the application namespace
+auth
+ auth:clear-resets     Flush expired password reset tokens
+cache
+ cache:clear           Flush the application cache
+ cache:table           Create a migration for the cache database table
+config
+ config:cache          Create a cache file for faster configuration loading
+ config:clear          Remove the configuration cache file
+db
+ db:seed               Seed the database with records
+event
+ event:generate        Generate the missing events and handlers based on registra
+tion
+handler
+ handler:command       Create a new command handler class
+ handler:event         Create a new event handler class
+ide-helper
+ ide-helper:generate   Generate a new IDE Helper file.
+ ide-helper:models     Generate autocompletion for models
+key
+ key:generate          Set the application key
+make
+ make:command          Create a new command class
+ make:console          Create a new Artisan command
+ make:controller       Create a new resource controller class
+ make:event            Create a new event class
+ make:middleware       Create a new middleware class
+ make:migration        Create a new migration file
+ make:model            Create a new Eloquent model class
+ make:provider         Create a new service provider class
+ make:request          Create a new form request class
+migrate
+ migrate:install       Create the migration repository
+ migrate:refresh       Reset and re-run all migrations
+ migrate:reset         Rollback all database migrations
+ migrate:rollback      Rollback the last database migration
+ migrate:status        Show a list of migrations up/down
+queue
+ queue:failed          List all of the failed queue jobs
+ queue:failed-table    Create a migration for the failed queue jobs database tabl
+e
+ queue:flush           Flush all of the failed queue jobs
+ queue:forget          Delete a failed queue job
+ queue:listen          Listen to a given queue
+ queue:restart         Restart queue worker daemons after their current job
+ queue:retry           Retry a failed queue job
+ queue:subscribe       Subscribe a URL to an Iron.io push queue
+ queue:table           Create a migration for the queue jobs database table
+ queue:work            Process the next job on a queue
+route
+ route:cache           Create a route cache file for faster route registration
+ route:clear           Remove the route cache file
+ route:list            List all registered routes
+schedule
+ schedule:run          Run the scheduled commands
+session
+ session:table         Create a migration for the session database table
+vendor
+ vendor:publish        Publish any publishable assets from vendor packages
+
+c:\wamp\www\Naturalsynthetix>php artisan migrate:rollback help
+
+
+
+  [RuntimeException]
+  Too many arguments.
+
+
+
+
+c:\wamp\www\Naturalsynthetix>php artisan help migrate:rollback
+Usage:
+ migrate:rollback [--database[="..."]] [--force] [--pretend]
+
+Options:
+ --database            The database connection to use.
+ --force               Force the operation to run when in production.
+ --pretend             Dump the SQL queries that would be run.
+ --help (-h)           Display this help message
+ --quiet (-q)          Do not output any message
+ --verbose (-v|vv|vvv) Increase the verbosity of messages: 1 for normal output, 2
+ for more verbose output and 3 for debug
+ --version (-V)        Display this application version
+ --ansi                Force ANSI output
+ --no-ansi             Disable ANSI output
+ --no-interaction (-n) Do not ask any interactive question
+ --env                 The environment the command should run under.
+
+
+c:\wamp\www\Naturalsynthetix>php artisan migrate:rollback --pretend
+
+c:\wamp\www\Naturalsynthetix>php artisan make:migration drop_excerpt_from_article
+s_table --table="articles"
+Created Migration: 2015_02_28_094630_drop_excerpt_from_articles_table
+
+c:\wamp\www\Naturalsynthetix>php artisan migrate
+
+
+
+  [Illuminate\Database\QueryException]
+  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'articles' al
+  ready exists (SQL: create table `articles` (`id` int unsigned not null auto_
+  increment primary key, `created_at` timestamp default 0 not null, `updated_a
+  t` timestamp default 0 not null) default character set utf8 collate utf8_gen
+  eral_ci)
+
+
+
+
+
+
+  [PDOException]
+  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'articles' al
+  ready exists
+
+
+
+
+c:\wamp\www\Naturalsynthetix>php artisan tinker
+Psy Shell v0.3.5 (PHP 5.5.12 ÔÇö cli) by Justin Hileman
+>>> $article = App\Article::create(['title'=>'New Article 2','body'=>'Lorem ipsum
+ dolor sit amet','published_at'=>Carbon\Carbon::now()]);
+=> <App\Article #0000000030347c860000000080bae659> {
+       incrementing: true,
+       timestamps: true,
+       exists: true,
+       snakeAttributes: true,
+       manyMethods: [
+           "belongsToMany",
+           "morphToMany",
+           "morphedByMany"
+       ]
+   }
+>>> App\Article::all()->toArray();
+=> [
+       [
+           "id"           => 1,
+           "title"        => "My new Article",
+           "body"         => "Lorem ipsum dolor sit amet, consectetur adipiscing
+elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr
+oident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+           "created_at"   => "2015-02-28 09:15:12",
+           "updated_at"   => "2015-02-28 09:21:49",
+           "published_at" => "2015-02-28 09:13:48"
+       ],
+       [
+           "id"           => 2,
+           "title"        => "New Article 2",
+           "body"         => "Lorem ipsum dolor sit amet",
+           "created_at"   => "2015-02-28 09:56:45",
+           "updated_at"   => "2015-02-28 09:56:45",
+           "published_at" => "2015-02-28 09:56:45"
+       ]
+   ]
+>>> 

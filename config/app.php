@@ -149,6 +149,7 @@ return [
              * Addition Service providers
              */
             'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+            'Laracasts\Generators\GeneratorsServiceProvider',
 
 	],
 
