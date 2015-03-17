@@ -1,33 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        @include('includes.head')
-    </head>
-    <body>
-        <div class="container">
+   <head>
+	 @include('includes.head')
+   </head>
+   <body>
+	 <div id="wrapper">
 
-            <header class="row">
-                @include('includes.header')
-            </header>
+	    <!--            <header class="row">
+					@include('includes.header')
+				 </header>-->
 
-            <div id="main" class="row">
+	    <div id="main">
 
-                <!-- sidebar content -->
-                <div id="sidebar" class="col-md-4">
-                    @include('includes.sidebar')
-                </div>
+		  <!-- sidebar content -->
+		  @include('includes.sidebar')
 
-                <!-- main content -->
-                <div id="content" class="col-md-8">
-                    @yield('content')
-                </div>
+		  <!-- main content -->
+		  <div id="content" class="col-md-12">
+			@yield('content')
+		  </div>
 
-            </div>
+		  <!-- JavaScript -->
+		  <div id="javascript" class="invisible">
+			@include('includes.javascript')
+		  </div>
 
-            <footer class="row">
-                @include('includes.footer')
-            </footer>
+	    </div>
 
-        </div>
-    </body>
+<!--	    <footer class="row">
+		  @include('includes.footer')
+	    </footer>-->
+
+	 </div>
+   </body>
 </html>
