@@ -16,5 +16,3 @@ Created by Martin Parrag on 2015-03-17
 
 <!-- Morris.js JavaScript -->
 {!! HTML::script('startbootstrap/bower_components/morrisjs/morris.min.js') !!}
-
-
